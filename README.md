@@ -8,6 +8,7 @@
 import flower
 
 let bloom = newBloom(capacity = 1e7.int, errorRate = 0.001)
+
 bloom.add("string")
 bloom.add(12345678)
 bloom.add([1, 2, ])
