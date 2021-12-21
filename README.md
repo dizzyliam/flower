@@ -16,8 +16,8 @@ assert "string" in bloom
 assert "not" notin bloom
 ```
 
-## What do the arguments mean?
+## a r g u m e n t s
 The two arguments passed when creating a bloom filter are used to decide the best parameters for the filter, so that the false-positive rate will equal `errorRate` when the number of added items is `capacity`. If excess items are added, the filter will continue to function, but the false-positive rate will increase.
 
-## What data types can I add to the filter?
+## d a t a t y p e s
 Flower uses [std/hashes](https://nim-lang.org/docs/hashes.html) for creating the k-hashes, so all built-in types are supported, and it's easy to add support for your own.
