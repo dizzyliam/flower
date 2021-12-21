@@ -16,8 +16,16 @@ assert "string" in bloom
 assert "not" notin bloom
 ```
 
-## a r g u m e n t s
+## p a r a m e t e r s
 The two arguments passed when creating a bloom filter are used to decide the best parameters for the filter, so that the false-positive rate will equal `errorRate` when the number of added items is `capacity`. If excess items are added, the filter will continue to function, but the false-positive rate will increase.
 
 ## d a t a t y p e s
 Flower uses [std/hashes](https://nim-lang.org/docs/hashes.html) for creating the k-hashes, so all built-in types are supported, and it's easy to add support for your own.
+
+## p r o c s
+
+* `proc newBloom(capacity: int, errorRate: float): Bloom`
+* `proc add[T](bloom: var Bloom, x: T)`
+* `proc contains[T](bloom: var Bloom, x: T): bool =`
+* `proc union(x, y: Bloom): Bloom =`
+* `proc merge(x: var Bloom, y: Bloom)`
