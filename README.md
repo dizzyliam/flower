@@ -26,6 +26,6 @@ Flower uses [std/hashes](https://nim-lang.org/docs/hashes.html) for creating the
 
 * `proc newBloom(capacity: int, errorRate: float): Bloom`
 * `proc add[T](bloom: var Bloom, x: T)`
-* `proc contains[T](bloom: var Bloom, x: T): bool =`
-* `proc union(x, y: Bloom): Bloom =`
+* `proc contains[T](bloom: var Bloom, x: T): bool`
+* `proc union(x, y: Bloom): Bloom`
 * `proc merge(x: var Bloom, y: Bloom)`
