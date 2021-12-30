@@ -45,7 +45,7 @@ proc testBit(bitArray: BitArray, index: uint): bool =
     let l = getLocation(index)
     return bitArray.intSeq[l.address].testBit(l.offset)
 
-proc newBloom*(capacity: int, errorRate: float): Bloom =
+proc newBloom*(capacity: SomeNumber, errorRate: float): Bloom =
     ## Initializes a bloom filter for a given error rate at a given capacity.
     result.capacity = capacity.uint
     result.bits = abs((capacity.float*ln(errorRate)) / pow(ln(2.0), 2)).uint
