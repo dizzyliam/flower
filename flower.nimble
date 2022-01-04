@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "1.0.0"
 author        = "Liam Scaife"
 description   = "A pure Nim bloom filter."
 license       = "MIT"
